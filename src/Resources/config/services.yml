@@ -1,0 +1,30 @@
+services:
+    Wandi\MailerBundle\Renderer\Adapter\AbstractAdapter:
+        abstract: true
+        calls:
+            - method: setEventDispatcher
+              arguments:
+                  - '@event_dispatcher'
+
+    Wandi\MailerBundle\Renderer\Adapter\EmailTwigAdapter:
+        parent: Wandi\MailerBundle\Renderer\Adapter\AbstractAdapter
+        arguments:
+            - '@twig'
+
+    Wandi\MailerBundle\Sender\Adapter\AbstractAdapter:
+        abstract: true
+        calls:
+            - method: setEventDispatcher
+              arguments:
+                  - '@event_dispatcher'
+
+    Wandi\MailerBundle\Sender\Adapter\SwiftMailerAdapter:
+        parent: Wandi\MailerBundle\Sender\Adapter\AbstractAdapter
+        arguments:
+            - '@mailer'
+
+    Wandi\MailerBundle\Sender\Sender:
+        arguments:
+            - '@wandi.email_renderer.adapter'
+            - '@wandi.email_sender.adapter'
+            - { address: '%wandi.mailer.sender_address%', name: '%wandi.mailer.sender_name%' }
