@@ -10,7 +10,7 @@ use Wandi\MailerBundle\Renderer\RenderedEmail;
 interface AdapterInterface
 {
     /**
-     * @param array  $recipients
+     * @param array $recipients
      * @param string $senderAddress
      * @param string $senderName
      * @param RenderedEmail $renderedEmail

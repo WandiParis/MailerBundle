@@ -26,7 +26,7 @@ final class Configuration implements ConfigurationInterface
                 ->arrayNode('sender')
                     ->addDefaultsIfNotSet()
                     ->children()
-                        ->scalarNode('name')->defaultValue('Example.com Store')->end()
+                        ->scalarNode('name')->defaultValue('Example')->end()
                         ->scalarNode('address')->defaultValue('no-reply@example.com')->end()
                     ->end()
                 ->end()
