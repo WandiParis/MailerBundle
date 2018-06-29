@@ -16,8 +16,7 @@
             "email": "jndl@wandi.fr"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "minimum-stability": "stable",
     "require": {
         "php": ">=7.1",
         "symfony/twig-bundle": "^4.0",
