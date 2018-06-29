@@ -26,6 +26,7 @@ class EmailTwigAdapter extends AbstractAdapter
 
     /**
      * {@inheritdoc}
+     *
      * @throws \Throwable
      * @throws \Twig_Error_Loader
      * @throws \Twig_Error_Runtime
@@ -46,9 +47,10 @@ class EmailTwigAdapter extends AbstractAdapter
 
     /**
      * @param EmailInterface $email
-     * @param array $data
+     * @param array          $data
      *
      * @return RenderedEmail
+     *
      * @throws \Throwable
      * @throws \Twig_Error_Loader
      * @throws \Twig_Error_Runtime

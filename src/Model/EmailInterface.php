@@ -12,9 +12,23 @@ interface EmailInterface
     public function getTemplate(): string;
 
     /**
+     * @param string $template
+     *
+     * @return EmailInterface
+     */
+    public function setTemplate(string $template): EmailInterface;
+
+    /**
      * @return string|null
      */
     public function getSenderName(): ?string;
+
+    /**
+     * @param string $senderName
+     *
+     * @return EmailInterface
+     */
+    public function setSenderName(string $senderName): EmailInterface;
 
     /**
      * @return string|null
@@ -22,7 +36,15 @@ interface EmailInterface
     public function getSenderAddress(): ?string;
 
     /**
+     * @param string $senderAddress
+     *
+     * @return EmailInterface
+     */
+    public function setSenderAddress(string $senderAddress): EmailInterface;
+
+    /**
      * @param array $attributes
+     *
      * @return EmailInterface
      */
     public function addAttributes(array $attributes): EmailInterface;
@@ -30,6 +52,7 @@ interface EmailInterface
     /**
      * @param string $key
      * @param $value
+     *
      * @return EmailInterface
      */
     public function addAttribute(string $key, $value);
@@ -41,6 +64,7 @@ interface EmailInterface
 
     /**
      * @param string $key
+     *
      * @return mixed|null
      */
     public function getAttribute(string $key);
@@ -50,6 +74,7 @@ interface EmailInterface
      * @param array $data
      * @param array $attachments
      * @param array $replyTo
+     *
      * @return EmailInterface
      */
     public function send(array $recipients, array $data = [], array $attachments = [], array $replyTo = []);

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Wandi\MailerBundle\Event;
 
-use Wandi\MailerBundle\Model\EmailInterface;
 use Symfony\Component\EventDispatcher\Event;
+use Wandi\MailerBundle\Model\EmailInterface;
 
 final class EmailSendEvent extends Event
 {
@@ -35,11 +35,11 @@ final class EmailSendEvent extends Event
     protected $replyTo;
 
     /**
-     * @param mixed $message
+     * @param mixed          $message
      * @param EmailInterface $email
-     * @param array $data
-     * @param array $recipients
-     * @param array $replyTo
+     * @param array          $data
+     * @param array          $recipients
+     * @param array          $replyTo
      */
     public function __construct($message, EmailInterface $email, array $data, array $recipients = [], array $replyTo = [])
     {

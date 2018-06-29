@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Wandi\MailerBundle\Event;
 
-use Wandi\MailerBundle\Renderer\RenderedEmail;
 use Symfony\Component\EventDispatcher\Event;
+use Wandi\MailerBundle\Renderer\RenderedEmail;
 
 class EmailRenderEvent extends Event
 {
@@ -21,7 +21,7 @@ class EmailRenderEvent extends Event
 
     /**
      * @param RenderedEmail $renderedEmail
-     * @param array $recipients
+     * @param array         $recipients
      */
     public function __construct(RenderedEmail $renderedEmail, array $recipients = [])
     {

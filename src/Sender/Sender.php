@@ -27,15 +27,14 @@ final class Sender implements SenderInterface
 
     /**
      * @param RendererAdapterInterface $rendererAdapter
-     * @param SenderAdapterInterface $senderAdapter
-     * @param array $defaultSender
+     * @param SenderAdapterInterface   $senderAdapter
+     * @param array                    $defaultSender
      */
     public function __construct(
         RendererAdapterInterface $rendererAdapter,
         SenderAdapterInterface $senderAdapter,
         array $defaultSender
-    )
-    {
+    ) {
         $this->senderAdapter = $senderAdapter;
         $this->rendererAdapter = $rendererAdapter;
         $this->defaultSender = $defaultSender;

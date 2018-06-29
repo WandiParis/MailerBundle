@@ -25,6 +25,19 @@ services:
 
     Wandi\MailerBundle\Sender\Sender:
         arguments:
-            - '@wandi.mailer.email_renderer.adapter'
-            - '@wandi.mailer.email_sender.adapter'
+            - '@wandi.email_renderer.adapter'
+            - '@wandi.email_sender.adapter'
             - { address: '%wandi.mailer.sender_address%', name: '%wandi.mailer.sender_name%' }
+
+    Wandi\MailerBundle\Option2\Sender:
+        arguments:
+            - '@wandi.email_renderer.adapter'
+            - '@wandi.email_sender.adapter'
+            - { address: '%wandi.mailer.sender_address%', name: '%wandi.mailer.sender_name%' }
+            - '@twig'
+
+    Wandi\MailerBundle\Option2\Mailer:
+        arguments:
+            - '@Wandi\MailerBundle\Option2\Sender'
+
+

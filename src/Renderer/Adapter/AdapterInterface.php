@@ -11,7 +11,7 @@ interface AdapterInterface
 {
     /**
      * @param EmailInterface $email
-     * @param array $data
+     * @param array          $data
      *
      * @return RenderedEmail
      */

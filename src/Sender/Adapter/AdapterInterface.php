@@ -10,14 +10,14 @@ use Wandi\MailerBundle\Renderer\RenderedEmail;
 interface AdapterInterface
 {
     /**
-     * @param array $recipients
-     * @param string $senderAddress
-     * @param string $senderName
-     * @param RenderedEmail $renderedEmail
+     * @param array          $recipients
+     * @param string         $senderAddress
+     * @param string         $senderName
+     * @param RenderedEmail  $renderedEmail
      * @param EmailInterface $email
-     * @param array $data
-     * @param array $attachments
-     * @param array $replyTo
+     * @param array          $data
+     * @param array          $attachments
+     * @param array          $replyTo
      */
     public function send(
         array $recipients,
