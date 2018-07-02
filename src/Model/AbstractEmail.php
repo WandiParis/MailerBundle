@@ -144,11 +144,13 @@ abstract class AbstractEmail implements EmailInterface
      * @param array $attachments
      * @param array $replyTo
      *
+     * @param array $cc
+     * @param array $bcc
      * @return EmailInterface
      */
-    public function send(array $recipients, array $data = [], array $attachments = [], array $replyTo = [])
+    public function send(array $recipients, array $data = [], array $attachments = [], array $replyTo = [], array $cc = [], array $bcc = [])
     {
-        $this->sender->send($this, $recipients, $data, $attachments, $replyTo);
+        $this->sender->send($this, $recipients, $data, $attachments, $replyTo, $cc, $bcc);
 
         return $this;
     }

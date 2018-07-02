@@ -1,0 +1,6 @@
+# /config/packages/wandi_mailer.yaml
+
+wandi_mailer:
+    sender:
+        name: 'Zinédine Zidane'
+        address: 'zinedine.zidane@france.fr'

@@ -1,0 +1,9 @@
+{# /templates/email/new_post.html.twig #}
+
+{% block subject %}
+   New article by {{ author.name }} has been published
+{% endblock %}
+
+{% block body %}
+    {{ author.name }} has just published a new article called: "{{ post.title }}"
+{% endblock %}

@@ -43,7 +43,7 @@ final class Sender implements SenderInterface
     /**
      * {@inheritdoc}
      */
-    public function send(EmailInterface $email, array $recipients, array $data = [], array $attachments = [], array $replyTo = []): void
+    public function send(EmailInterface $email, array $recipients, array $data = [], array $attachments = [], array $replyTo = [], array $cc = [], array $bcc = []): void
     {
         $senderAddress = $email->getSenderAddress() ?: $this->defaultSender['address'];
         $senderName = $email->getSenderName() ?: $this->defaultSender['name'];
