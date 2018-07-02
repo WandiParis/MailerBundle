@@ -58,7 +58,9 @@ final class Sender implements SenderInterface
             $email,
             $data,
             $attachments,
-            $replyTo
+            $replyTo,
+            $cc,
+            $bcc
         );
     }
 }

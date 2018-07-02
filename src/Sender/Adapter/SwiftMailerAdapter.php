@@ -55,7 +55,7 @@ class SwiftMailerAdapter extends AbstractAdapter
             $message->attach($file);
         }
 
-        $emailSendEvent = new EmailSendEvent($message, $email, $data, $recipients, $replyTo);
+        $emailSendEvent = new EmailSendEvent($message, $email, $data, $recipients, $replyTo, $cc, $bcc);
 
         $this->dispatcher->dispatch(WandiMailerEvents::EMAIL_PRE_SEND, $emailSendEvent);
 
